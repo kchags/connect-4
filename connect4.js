@@ -1,13 +1,26 @@
-let playerRed = "R";
-let playerYellow = "Y";
-let currPlayer = playerRed;
+// let playerRed = "R";
+// let playerYellow = "Y";
+// let currPlayer = playerRed;
 
-let gameOver = false;
-let board;
+// let gameOver = false;
+// let board;
 
-let rows = 6;
-let columns = 7;
-let currColumns = []; //keeps track of which row each column is at.
+// let rows = 6;
+// let columns = 7;
+// let currColumns = []; //keeps track of which row each column is at.
+
+class Game {
+    constructor(playerRed, playerYellow, height = 6, width = 7) {
+        this.height = height;
+        this.width = width;
+        this.currPlayer = playerRed;
+        this.makeBoard();
+        this.makeHtmBoard();
+        this.gameOver = false;
+        this.playerRed = playerRed;
+        this.playerYellow = playerYellow;
+    }
+}
 
 window.onload = function() {
     setGame();
